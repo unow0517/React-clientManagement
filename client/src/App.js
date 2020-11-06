@@ -74,15 +74,17 @@ class App extends Component{
                 <TableCell>Number</TableCell>
                 <TableCell>Image</TableCell>
                 <TableCell>Name</TableCell>
-                <TableCell>Birthdat</TableCell>
+                <TableCell>Birthday</TableCell>
                 <TableCell>Gender</TableCell>
                 <TableCell>Job</TableCell>
+                <TableCell>Setting</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
                 {this.state.customers ? this.state.customers.map(c => {
                   return(
                     <Customer
+                        stateRefresh={this.stateRefresh}
                         key={c.id}
                         id={c.id}
                         image={c.image}
